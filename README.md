@@ -1,76 +1,35 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+# FILE-OPERATIONS-PROGRAM
 
-public class FileOperations {
+*COMPANY*: CODTECH IT SOLUTIONS
 
-    // Method to write to a file
-    public static void writeToFile(String filename, String content) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            writer.write(content);
-            System.out.println("File written successfully.");
-        } catch (IOException e) {
-            System.out.println("Error writing to file: " + e.getMessage());
-        }
-    }
+*NAME*:Dirghayush Umakant Sogale 
 
-    // Method to read from a file
-    public static void readFromFile(String filename) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            System.out.println("\nFile content:");
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading from file: " + e.getMessage());
-        }
-    }
+*INTERN ID*: :CITS0D178
 
-    // Method to modify a file (replace a word)
-    public static void modifyFile(String filename, String oldWord, String newWord) {
-        StringBuilder content = new StringBuilder();
+*DOMAIN*: CORE JAVA / FILE HANDLING
 
-        // Read original content
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                content.append(line.replace(oldWord, newWord)).append("\n");
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading file for modification: " + e.getMessage());
-            return;
-        }
+*DURATION*: 4 WEEKS
 
-        // Write modified content back
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            writer.write(content.toString());
-            System.out.println("File modified successfully.");
-        } catch (IOException e) {
-            System.out.println("Error writing modified content: " + e.getMessage());
-        }
-    }
+*MENTOR*: NEELA SANTOSH
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String filename = "example.txt";
 
-        System.out.println("Enter content to write to file:");
-        String inputContent = scanner.nextLine();
-        writeToFile(filename, inputContent);
+# DESCRIPTION OF MY TASK #
 
-        readFromFile(filename);
+As part of my internship at **CodTech IT Solutions**, I developed a Java-based **File Operations Application** to demonstrate the use of Java's file handling capabilities. This project was focused on three main operations: writing to a file, reading from a file, and modifying the contents of a file.
 
-        System.out.println("\nEnter word to replace:");
-        String oldWord = scanner.nextLine();
+The application allows users to input text through the console, which is then written into a file using `BufferedWriter`. This was helpful in understanding how file creation and writing operations work in Java. If the file already exists, the content is overwritten.
 
-        System.out.println("Enter new word:");
-        String newWord = scanner.nextLine();
+After writing, the program reads the content of the file using `BufferedReader` and displays it line by line on the console. This part of the project helped me learn how to access stored data, handle line-based reading, and manage exceptions related to file input.
 
-        modifyFile(filename, oldWord, newWord);
-        readFromFile(filename);
-    }
-}
+The third functionality was modifying the content of the file. The user can provide a word to replace and its new replacement word. The program reads the original content, replaces the specified word using string operations, and then writes the updated content back to the same file.
+
+Throughout this task, I used various Java I/O classes such as `FileWriter`, `FileReader`, `BufferedWriter`, `BufferedReader`, and Scanner. I also practiced exception handling to ensure that the program doesn’t crash due to file access errors.
+
+This project improved my Java coding skills and gave me real-world experience with file operations. I now understand how to manage file streams, ensure resource safety using try-with-resources, and manipulate text-based data effectively.
+
+Overall, this was a useful and educational task that enhanced my understanding of file handling in Java.
+
+
+#OUTPUT
+
+
